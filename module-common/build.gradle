@@ -35,3 +35,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.bootJar { enabled = false} //xxx.jar 라는 형식으로 만들어짐 , common module은 참조로 쓰이는 모듈이기 때문에 jar가 만들어질 필요가 없기 때문에 false로 설정
+tasks.jar { enabled = true } //xxx-plain.jar 라는 형식으로 만들어짐, 디펜던시를 가지지 않음, 서버를 실행시킬 수 없음, 디폴트가 트루라 명시를 안 해줘도 되지만 걍 해줌
